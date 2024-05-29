@@ -1,9 +1,9 @@
-@import "/src/css/reset.css";
-@import "/src/css/running_line.css";
-@import "/src/css/lecture.css";
-@import "/src/css/transformation-stages.css";
-@import "/src/css/tournament-participants.css";
-@import "/src/css/footer.css";
+@import "./reset.css";
+@import "./running_line.css";
+@import "./lecture.css";
+@import "./transformation-stages.css";
+@import "./tournament-participants.css";
+@import "./footer.css";
 
 * {
   padding: 0;
