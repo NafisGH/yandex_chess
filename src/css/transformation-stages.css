@@ -1,0 +1,226 @@
+.transformation-stages__inner {
+  padding-left: 72px;
+  padding-right: 48px;
+  margin-top: 166px;
+}
+
+.transformation-stages__title,
+.transformation-stages__subtitle {
+  color: #313131;
+  font-family: "Merriweather";
+  font-size: 54px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.transformation-stages__subtitle {
+  font-family: "Golos Text";
+  font-size: 18px;
+  color: #3057a2;
+  text-decoration: none;
+  line-height: 138%;
+  margin-left: 20px;
+  text-transform: none;
+  letter-spacing: 1.18px;
+}
+
+.transformation-stages__subtitle-wrap {
+  display: flex;
+  align-items: center;
+}
+.transformation-stages__list {
+  /* position: relative; */
+  display: grid;
+  grid-template-columns: repeat(3, 394px);
+  grid-template-rows: 111px 113px 136px;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-top: 54px;
+}
+
+.carousel {
+  position: relative;
+}
+
+.transformation-stages-img {
+  position: absolute;
+  right: -41px;
+  bottom: 26px;
+}
+
+.transformation-stages__list li {
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+}
+.transformation-stages__item {
+  background-color: #f0f0f0;
+  padding: 18px 20px 5px 70px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  position: relative;
+}
+
+.stage-number {
+  position: absolute;
+  top: 19px;
+  left: 19px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  font-size: 21px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+
+ul.transformation-stages__list {
+  /* counter-reset: item; */
+  margin-top: 140px;
+}
+
+.transformation-stages__item--span-rows {
+  grid-row: span 2;
+}
+
+.transformation-stages__item--span-cols {
+  grid-column: span 2;
+}
+.carousel__controls {
+  display: none;
+}
+.break-line-subtitle {
+  display: inline;
+}
+
+
+
+@media (max-width: 375px) {
+ 
+  .carousel__controls {
+    display: block;
+  }
+  .break-line-subtitle {
+    display: none;
+  }
+
+  .transformation-stages-img {
+    position: absolute;
+    /* right: -41px; */
+  }
+  /* Карусель --------------------*/
+  .carousel {
+    position: relative;
+    width: 340px;
+    /* height: 350px; */
+    /* margin: 0 auto; */
+    overflow: hidden;
+    /* margin-top: 63px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .transformation-stages__item {
+    padding-top: 60px;
+    width: 340px;
+    height: 320px;
+  }
+
+  .carousel__controls {
+    display: flex;
+    margin-top: 7px;
+  }
+  .prev-button,
+  .next-button {
+    width: 36px; 
+     height: 36px;
+    border: none;
+    background-color: transparent;
+  }
+
+
+  .slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+
+  .carousel__indicators {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    
+  }
+  
+  .carousel__indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+  
+  .carousel__indicator.active {
+    background-color: #313131;
+  }
+
+  
+  /* Карусель ------------------------------ */
+
+  .transformation-stages__inner {
+    padding-left: 21px;
+        padding-right: 16px;
+        margin-top: 112px;
+  }
+
+  .transformation-stages__title {
+    font-size: 36px;
+  }
+
+  
+  .transformation-stages__subtitle {
+    margin-left: 0;
+    margin-top: 9px;
+    /* width: 100%; */
+  }
+
+  .transformation-stages__subtitle-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stage-number {
+    position: absolute;
+    top: 60px;
+    left: 19px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    font-size: 21px;
+    font-weight: bold;
+    color: #333;
+  }
+  .transformation-stages__item::before {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+
+}

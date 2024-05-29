@@ -1,0 +1,198 @@
+
+
+.tournament-participants__inner {
+  margin-top: 200px;
+  padding-left: 72px;
+  padding-right: 72px;
+  padding-bottom: 120px;
+}
+
+.tournament-participants__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tournament-participants__title {
+  color: #313131;
+  font-family: "Merriweather";
+  font-size: 54px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.tournament-participants__nav {
+  display: flex;
+  align-items: center;
+}
+
+.tournament-participants__nav-icon {
+    --circle-color: #313131;
+    --arrow-color: white;
+    width: 44px;
+    height: 44px;
+}
+
+.nav-icon__circle {
+    fill: var(--circle-color);
+  }
+
+  .nav-icon__arrow {
+    stroke: var(--arrow-color);
+    stroke-width: 2;
+    stroke-linecap: square;
+  }
+
+  .tournament-participants__nav-icon:hover {
+    --circle-color: #FBCE51;
+    cursor: pointer;
+      /* --arrow-color: yellow; */
+  }
+
+.tournament-participants__nav-text {
+  margin: 0 10px;
+  font-size: 16px;
+  color: #313131;
+  margin-right: 19px;
+  margin-left: 15px;
+}
+
+.tournament-participants__carousel {
+  overflow: hidden;
+}
+
+.tournament-participants__list {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  padding-top: 37px;
+}
+
+.participants__item {
+  min-width: calc(33.333% - 20px);
+  padding: 20px;
+  text-align: center;
+  margin-right: 13px;
+  margin-left: 15px;
+}
+
+.participant__img {
+  width: 320px;
+  height: 320px;
+}
+
+.participant__img img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.participant__name {
+  font-family: "Golos Text";
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+  margin: 31px 24px 0px 0px;
+  color: #313131;
+}
+
+.participant__title {
+  font-family: "Golos Text";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  opacity: 0.6;
+  margin: 7px 24px 0px 0px;
+}
+
+.participant__button {
+  padding: 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Golos Text";
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 62px;
+  color: #3057a2;
+  border: 1px solid #3057a2;
+  margin: 18px 24px 0px 0px;
+  font-weight: 500;
+line-height: 63%;
+}
+
+.participant__button:hover {
+    background: #3057A2;
+    color: #FFF;
+    cursor: pointer;
+}
+
+@media (max-width: 375px) {
+    .tournament-participants__inner {
+      margin-top: 120px;
+      padding-left: 18px;
+      padding-right: 16px;
+      padding-bottom: 60px;
+    }
+  
+    .tournament-participants__header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .tournament-participants__title {
+      font-size: 36px;
+      line-height: 110%;
+    }
+  
+    .tournament-participants__nav {
+      margin-top: 30px;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+
+    }
+  
+    .tournament-participants__nav-icon {
+      width: 36px;
+      height: 36px;
+    }
+  
+    .tournament-participants__nav-text {
+      font-size: 14px;
+    }
+  
+    .participants__item {
+      min-width: 100%;
+      padding: 10px;
+      margin: 0;
+    }
+  
+    .participant__img {
+        width: 240px;
+        height: 240px;
+        margin: 0 auto;
+      }
+
+    .participant__img img{
+      width: 100%;
+      height: auto;
+    }
+  
+    .participant__name {
+      font-size: 24px;
+      margin: 27px 0 0 0;
+    }
+  
+    .participant__title {
+      font-size: 20px;
+      margin: 4px 0 0 0;
+    }
+  
+    .participant__button {
+      font-size: 16px;
+      padding: 11px;
+      margin: 24px 0 0 0;
+    }
+  }
+  

@@ -1,0 +1,172 @@
+@import "/src/css/reset.css";
+@import "/src/css/running_line.css";
+@import "/src/css/lecture.css";
+@import "/src/css/transformation-stages.css";
+@import "/src/css/tournament-participants.css";
+@import "/src/css/footer.css";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.hero__image {
+  position: relative;
+  background-image: 
+    url("/public/images/Group\ 12.png");
+  background-position:  center;
+  background-size:  cover;
+  background-repeat: no-repeat;
+  height: 700px;
+  width: 100%;
+}
+.inner {
+  padding-left: 72px;
+  padding-right: 72px;
+}
+
+.hero__logo {
+  position: absolute;
+  top: 24px;
+}
+
+.hero__content {
+  padding-top: 124px;
+  max-width: 542px;
+}
+.hero__headline p {
+  font-family: "Merriweather";
+  font-size: 60px;
+  line-height: 110%;
+  text-transform: uppercase;
+}
+
+.hero__headline p:nth-child(2) {
+  text-align: center;
+}
+.hero__headline p:nth-child(3) {
+  text-align: end;
+}
+
+.hero__text {
+  text-align: center;
+  margin-top: 24px;
+  font-family: "Golos Text";
+  font-size: 18px;
+  line-height: 130%;
+}
+
+.hero__buttons {
+  margin-top: 37px;
+  text-align: center;
+}
+
+.hero__button {
+  font-family: "Golos Text", sans-serif;
+  font-size: 16px;
+  line-height: 130%;
+  padding: 14px;
+  border-radius: 66px;
+  width: 260px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.hero__button--support {
+  margin-right: 16px;
+  background-color: black;
+  border: none;
+  color: white;
+}
+.hero__button--details {
+  border: 2px solid #1f1f1f;
+  color: #1f1f1f;
+}
+
+.hero__button--support:hover {
+  cursor: pointer;
+  background-color: #fbce51;
+  color: #1f1f1f;
+}
+
+.hero__button--details:hover {
+  cursor: pointer;
+  background-color: #1f1f1f;
+  color: #fff;
+}
+
+
+.break-line {
+    display: inline; /* Показываем <br> */
+}
+@media (max-width: 375px) {
+    .break-line {
+        display: none; /* Скрываем <br> */
+    }
+  .hero__image {
+    background-image: url("/public/images/Group\ 8.png");
+    background-position: center;
+    background-size: auto auto;
+    height: 775px;
+  }
+  .inner {
+    padding-left: 20px;
+
+  }
+
+  .hero__logo {
+    left: 20px;
+    top: 19px;
+    width: 211px;
+    height: auto;
+  }
+
+  .hero__content {
+    /* margin-left: 20px; */
+    padding-top: 91px;
+    max-width: 335px;
+  }
+  .hero__headline {
+    width: 335px;
+  }
+  .hero__headline p {
+    font-size: 36px;
+    letter-spacing: 0.2px;
+  }
+
+  .hero__text {
+    width: 335px;
+    font-size: 18px;
+    margin-top: 25px;
+    text-align: start;
+  }
+
+  .hero__buttons {
+    margin-top: 30px;
+    width: 335px;
+  }
+
+  .hero__button {
+    font-size: 14px;
+    width: 100%;
+    padding: 13px;
+        letter-spacing: 2px;
+  }
+
+  .hero__button--support {
+    margin-right: 0;
+    margin-bottom: 16px;
+    width: 100%;
+  }
+
+  .hero__button--details {
+    width: 100%;
+  }
+}

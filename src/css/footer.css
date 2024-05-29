@@ -1,0 +1,25 @@
+.footer {
+  background: #e9ded4;
+  height: 150px;
+}
+
+.footer__inner {
+  padding: 40px 72px 72px 72px;
+}
+.footer__inner p {
+  color: #313131;
+  font-family: "Golos Text";
+  font-size: 16px;
+  line-height: 120%;
+  opacity: 0.6;
+  letter-spacing: 1;
+}
+
+@media (max-width: 375px) {
+    .footer {
+        height: 252px;
+      }
+      .footer__inner {
+        padding: 40px 20px 60px 20px;
+      }
+}
