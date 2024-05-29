@@ -18,7 +18,7 @@
 .hero__image {
   position: relative;
   background-image: 
-    url("/images/Group\ 12.png");
+    url("../../public/images/Group\ 12.png");
   background-position:  center;
   background-size:  cover;
   background-repeat: no-repeat;
@@ -111,7 +111,7 @@
         display: none; /* Скрываем <br> */
     }
   .hero__image {
-    background-image: url("/images/Group\ 8.png");
+    background-image: url("../../public/images/Group\ 8.png");
     background-position: center;
     background-size: auto auto;
     height: 775px;
