@@ -115,7 +115,7 @@ ul.transformation-stages__list {
 
   .transformation-stages-img {
     position: absolute;
-    /* right: -41px; */
+    top: 0;
   }
   /* Карусель --------------------*/
   .carousel {
