@@ -29,7 +29,6 @@
   align-items: center;
 }
 .transformation-stages__list {
-  /* position: relative; */
   display: grid;
   grid-template-columns: repeat(3, 394px);
   grid-template-rows: 111px 113px 136px;
@@ -81,10 +80,7 @@
   color: #333;
 }
 
-
-
 ul.transformation-stages__list {
-  /* counter-reset: item; */
   margin-top: 140px;
 }
 
@@ -101,8 +97,6 @@ ul.transformation-stages__list {
 .break-line-subtitle {
   display: inline;
 }
-
-
 
 @media (max-width: 375px) {
  
@@ -121,10 +115,7 @@ ul.transformation-stages__list {
   .carousel {
     position: relative;
     width: 340px;
-    /* height: 350px; */
-    /* margin: 0 auto; */
     overflow: hidden;
-    /* margin-top: 63px; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -176,9 +167,6 @@ ul.transformation-stages__list {
     background-color: #313131;
   }
 
-  
-  /* Карусель ------------------------------ */
-
   .transformation-stages__inner {
     padding-left: 21px;
         padding-right: 16px;
@@ -188,12 +176,10 @@ ul.transformation-stages__list {
   .transformation-stages__title {
     font-size: 36px;
   }
-
   
   .transformation-stages__subtitle {
     margin-left: 0;
     margin-top: 9px;
-    /* width: 100%; */
   }
 
   .transformation-stages__subtitle-wrap {

@@ -1,5 +1,5 @@
 .running-line_buttom {
-padding-top: 40px;
+  padding-top: 40px;
 }
 
 .running-line__wrapper {
@@ -10,7 +10,6 @@ padding-top: 40px;
   gap: 20px;
   background: #f54932;
   color: white;
-
   padding: 18px 12px;
 }
 
@@ -74,8 +73,6 @@ padding-top: 40px;
   }
 
   .item {
-    
     font-size: 16px;
-   
   }
 }

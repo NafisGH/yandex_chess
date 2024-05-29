@@ -1,10 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   //   Методы для блока tournament-participants
-  const participantsList = document.querySelector('.tournament-participants__list');
-  const participants = document.querySelectorAll('.participants__item');
-  const prevButton = document.getElementById('prev');
-  const nextButton = document.getElementById('next');
-  const navText = document.querySelector('.tournament-participants__nav-text');
+  const participantsList = document.querySelector(
+    ".tournament-participants__list"
+  );
+  const participants = document.querySelectorAll(".participants__item");
+  const prevButton = document.getElementById("prev");
+  const nextButton = document.getElementById("next");
+  const navText = document.querySelector(".tournament-participants__nav-text");
 
   let index = 0;
   const totalItems = participants.length;
@@ -34,23 +36,23 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCarousel();
   };
 
-  nextButton.addEventListener('click', moveNext);
-  prevButton.addEventListener('click', movePrev);
+  nextButton.addEventListener("click", moveNext);
+  prevButton.addEventListener("click", movePrev);
 
   let autoSlideInterval = setInterval(moveNext, 4000);
 
   const handleResize = () => {
     if (window.innerWidth <= 375) {
       visibleItems = 1;
-      moveSize = participants[0].offsetWidth; // No margins for single item
+      moveSize = participants[0].offsetWidth;
     } else {
       visibleItems = 3;
-      moveSize = participants[0].offsetWidth + 28; // Including margin
+      moveSize = participants[0].offsetWidth + 28;
     }
     updateCarousel();
   };
 
-  window.addEventListener('resize', handleResize);
+  window.addEventListener("resize", handleResize);
   handleResize();
 
   //   Методы для блока lecture ---------------------
@@ -71,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
       `;
   }
 
-  function getMobileTable(params) {
+  function getMobileTable() {
     return `
         <div class="lecture__column-left ">
                   <div class="lecture__event-row">

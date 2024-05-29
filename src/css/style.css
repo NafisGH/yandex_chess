@@ -17,10 +17,9 @@
 
 .hero__image {
   position: relative;
-  background-image: 
-    url("../../public/images/Group\ 12.png");
-  background-position:  center;
-  background-size:  cover;
+  background-image: url("../../public/images/Group\ 12.png");
+  background-position: center;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 700px;
   width: 100%;
@@ -102,14 +101,13 @@
   color: #fff;
 }
 
-
 .break-line {
-    display: inline; /* Показываем <br> */
+  display: inline;
 }
 @media (max-width: 375px) {
-    .break-line {
-        display: none; /* Скрываем <br> */
-    }
+  .break-line {
+    display: none;
+  }
   .hero__image {
     background-image: url("../../public/images/Group\ 8.png");
     background-position: center;
@@ -118,7 +116,6 @@
   }
   .inner {
     padding-left: 20px;
-
   }
 
   .hero__logo {
@@ -129,7 +126,6 @@
   }
 
   .hero__content {
-    /* margin-left: 20px; */
     padding-top: 91px;
     max-width: 335px;
   }
@@ -157,7 +153,7 @@
     font-size: 14px;
     width: 100%;
     padding: 13px;
-        letter-spacing: 2px;
+    letter-spacing: 2px;
   }
 
   .hero__button--support {
