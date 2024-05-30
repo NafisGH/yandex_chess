@@ -1,101 +1,115 @@
 @import "./reset.css";
+@import "./fonts.css";
 @import "./running_line.css";
 @import "./lecture.css";
 @import "./transformation-stages.css";
 @import "./tournament-participants.css";
 @import "./footer.css";
 
-* {
-  padding: 0;
-  margin: 0;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #313131;
+  background-color: #ffffff;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
-  max-width: 1366px;
+  max-width: 1222px;
   margin: 0 auto;
+  /* padding: 0 15px; */
 }
 
-.hero__image {
-  position: relative;
-  background-image: url("../../public/images/Group\ 12.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 700px;
-  width: 100%;
+.main {
+  flex-grow: 1;
 }
-.inner {
-  padding-left: 72px;
-  padding-right: 72px;
+
+.stop-scroll {
+  overflow: hidden;
+}
+
+.header {
+  position: relative;
+  padding-top: 26px;
+  height: 700px;
+}
+.header__background {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  object-position: bottom;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .hero__logo {
   position: absolute;
   top: 24px;
 }
-
-.hero__content {
-  padding-top: 124px;
+.header__wrapper {
+  padding-top: 62px;
   max-width: 542px;
 }
-.hero__headline p {
+.header__title {
   font-family: "Merriweather";
   font-size: 60px;
   line-height: 110%;
   text-transform: uppercase;
 }
-
-.hero__headline p:nth-child(2) {
+.header__title span {
   text-align: center;
+  display: inline-block;
 }
-.hero__headline p:nth-child(3) {
-  text-align: end;
-}
-
-.hero__text {
+.header__text {
   text-align: center;
   margin-top: 24px;
-  font-family: "Golos Text";
+  font-family: "Golos Text", sans-serif;
   font-size: 18px;
   line-height: 130%;
 }
-
-.hero__buttons {
+.header__box {
   margin-top: 37px;
-  text-align: center;
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
 }
-
-.hero__button {
+.header__button {
+  max-width: 263px;
+  width: 100%;
+  padding: 20px 49px;
+  text-align: center;
+  display: inline-block;
   font-family: "Golos Text", sans-serif;
   font-size: 16px;
   line-height: 130%;
-  padding: 14px;
   border-radius: 66px;
-  width: 260px;
-  transition: background-color 0.5s ease, color 0.5s ease;
-  text-align: center;
-  display: inline-block;
-  text-decoration: none;
-}
-
-.hero__button--support {
-  margin-right: 16px;
-  background-color: black;
-  border: none;
-  color: white;
-}
-.hero__button--details {
   border: 2px solid #1f1f1f;
+  color: white;
+  background-color: #1f1f1f;
+}
+.header__button_color {
   color: #1f1f1f;
+  background: none;
 }
 
-.hero__button--support:hover {
+.header__button:hover {
   cursor: pointer;
   background-color: #fbce51;
   color: #1f1f1f;
 }
 
-.hero__button--details:hover {
+.header__button_color:hover {
   cursor: pointer;
   background-color: #1f1f1f;
   color: #fff;
@@ -104,21 +118,70 @@
 .break-line {
   display: inline;
 }
+.header__background_mobile {
+  display: none;
+}
 @media (max-width: 375px) {
+  .header {
+    height: 810px;
+    position: relative;
+  }
+
+  .main {
+    position: relative;
+    z-index: 1;
+  }
+
+  .running-line-top {
+    position: absolute;
+    top: -84px;
+    left: 0;
+    max-width: 375px;
+    z-index: 2;
+  }
+
+  .header__background_mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    object-fit: cover;
+    object-position: bottom;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  .header__wrapper {
+    padding-top: 30px;
+  }
+  .header__background {
+    display: none;
+  }
   .break-line {
     display: none;
   }
-  .hero__image {
-    background-image: url("../../public/images/Group\ 8.png");
-    background-position: center;
-    background-size: auto auto;
-    height: 775px;
-  }
-  .inner {
-    padding-left: 20px;
+  .header__title {
+    font-size: 36px;
   }
 
-  .hero__logo {
+  .header__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 305px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header__box {
+    margin-top: 29px;
+  }
+  .header__button {
+    max-width: 335px;
+    padding: 12px 18px;
+  }
+
+  /* .hero__logo {
     left: 20px;
     top: 19px;
     width: 211px;
@@ -156,13 +219,13 @@
     letter-spacing: 2px;
   }
 
-  .hero__button--support {
+  .header__button {
     margin-right: 0;
     margin-bottom: 16px;
     width: 100%;
   }
 
-  .hero__button--details {
+  .header__button_color {
     width: 100%;
-  }
+  } */
 }

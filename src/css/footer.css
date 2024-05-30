@@ -22,4 +22,9 @@
       .footer__inner {
         padding: 40px 20px 60px 20px;
       }
+      .footer__inner p {
+        font-family: "Golos Text";
+        font-weight: 400;
+        opacity: 0.6;
+      }
 }

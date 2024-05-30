@@ -11,7 +11,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let index = 0;
   const totalItems = participants.length;
   let visibleItems = 3;
-  let moveSize = participants[0].offsetWidth + 28; // Including margin
+
+  const calculateMoveSize = () => {
+    const itemStyle = getComputedStyle(participants[0]);
+    const itemWidth = participants[0].offsetWidth;
+    const marginRight = parseInt(itemStyle.marginRight);
+    const marginLeft = parseInt(itemStyle.marginLeft);
+    return itemWidth + marginRight + marginLeft;
+  };
+
+  let moveSize = calculateMoveSize(); // Including margin
 
   const updateCarousel = () => {
     participantsList.style.transform = `translateX(-${index * moveSize}px)`;
@@ -44,11 +53,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const handleResize = () => {
     if (window.innerWidth <= 375) {
       visibleItems = 1;
-      moveSize = participants[0].offsetWidth;
     } else {
       visibleItems = 3;
-      moveSize = participants[0].offsetWidth + 28;
     }
+    moveSize = calculateMoveSize();
     updateCarousel();
   };
 
@@ -56,13 +64,13 @@ document.addEventListener("DOMContentLoaded", () => {
   handleResize();
 
   //   Методы для блока lecture ---------------------
-  const lectureContent = document.querySelector(".lecture__content");
+  const lectureWrap = document.querySelector(".lecture__wrap");
   const tableWrapperContent = document.querySelector(".table-wrapper");
   const sliderContainer = document.querySelector(".slider-container");
 
   function getMobileTemplate() {
     return `
-        <div class="lecture__text">
+        <div class="lecture__content">
           <h2 class="lecture__title">Чтобы поддержать Международный Васюкинский Турнир</h2>
           <div class="lecture__image-wrapper">
             <img class="lecture__image" src="/public/images/many_chees.png" alt="Много шахматных фигур">
@@ -116,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function getDesktopTemplate() {
     return `
-        <div class="lecture__text">
+        <div class="lecture__content">
           <h2 class="lecture__title">Чтобы поддержать Международный Васюкинский Турнир посетите лекцию на тему:</h2>
           <h3 class="lecture__subtitle">«Плодотворная дебютная идея»</h3>
         </div>
@@ -202,10 +210,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", function () {
     if (window.innerWidth <= 375) {
-      lectureContent.innerHTML = getMobileTemplate();
+      lectureWrap.innerHTML = getMobileTemplate();
       tableWrapperContent.innerHTML = getMobileTable();
     } else {
-      lectureContent.innerHTML = getDesktopTemplate();
+      lectureWrap.innerHTML = getDesktopTemplate();
       tableWrapperContent.innerHTML = getDesctopTable();
     }
   });

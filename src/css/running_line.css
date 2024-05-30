@@ -39,6 +39,7 @@
 
 .item {
   font-family: "Merriweather";
+  font-weight: 400;
   flex: 0 0 auto;
   display: flex;
   justify-content: center;

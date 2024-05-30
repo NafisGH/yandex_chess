@@ -1,38 +1,39 @@
-.transformation-stages__inner {
-  padding-left: 72px;
-  padding-right: 48px;
+.stages__inner {
   margin-top: 166px;
 }
 
-.transformation-stages__title,
-.transformation-stages__subtitle {
+.stages__name,
+.stages__title,
+.stages__subtitle {
   color: #313131;
   font-family: "Merriweather";
+  font-weight: 400;
   font-size: 54px;
   line-height: 120%;
   text-transform: uppercase;
 }
 
-.transformation-stages__subtitle {
-  font-family: "Golos Text";
+.stages__subtitle {
+  font-family: "Merriweather";
+  font-weight: 400;
   font-size: 18px;
   color: #3057a2;
   text-decoration: none;
   line-height: 138%;
   margin-left: 20px;
   text-transform: none;
-  letter-spacing: 1.18px;
 }
 
-.transformation-stages__subtitle-wrap {
+.stages__subtitle-wrap {
   display: flex;
   align-items: center;
 }
-.transformation-stages__list {
+.stages__list {
   display: grid;
-  grid-template-columns: repeat(3, 394px);
-  grid-template-rows: 111px 113px 136px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+  max-width: 1300px;
+  margin: auto;
   list-style: none;
   padding: 0;
   margin-top: 54px;
@@ -42,20 +43,20 @@
   position: relative;
 }
 
-.transformation-stages-img {
+.stages-img {
   position: absolute;
   right: -41px;
   bottom: 26px;
 }
 
-.transformation-stages__list li {
+.stages__list li {
   color: #313131;
   font-family: "Golos Text";
   font-size: 20px;
   font-weight: 500;
   line-height: 120%;
 }
-.transformation-stages__item {
+.stages__item {
   background-color: #f0f0f0;
   padding: 18px 20px 5px 70px;
   border: 1px solid #ddd;
@@ -80,15 +81,15 @@
   color: #333;
 }
 
-ul.transformation-stages__list {
-  margin-top: 140px;
+ul.stages__list {
+  margin-top: 147px;
 }
 
-.transformation-stages__item--span-rows {
+.stages__item--span-rows {
   grid-row: span 2;
 }
 
-.transformation-stages__item--span-cols {
+.stages__item--span-cols {
   grid-column: span 2;
 }
 .carousel__controls {
@@ -107,11 +108,11 @@ ul.transformation-stages__list {
     display: none;
   }
 
-  .transformation-stages-img {
+  .stages-img {
     position: absolute;
     top: 0;
   }
-  /* Карусель --------------------*/
+
   .carousel {
     position: relative;
     width: 340px;
@@ -121,7 +122,7 @@ ul.transformation-stages__list {
     align-items: center;
   }
 
-  .transformation-stages__item {
+  .stages__item {
     padding-top: 60px;
     width: 340px;
     height: 320px;
@@ -167,22 +168,22 @@ ul.transformation-stages__list {
     background-color: #313131;
   }
 
-  .transformation-stages__inner {
+  .stages__inner {
     padding-left: 21px;
         padding-right: 16px;
         margin-top: 112px;
   }
 
-  .transformation-stages__title {
+  .stages__name,
+  .stages__title {
     font-size: 36px;
   }
   
-  .transformation-stages__subtitle {
+  .stages__subtitle {
     margin-left: 0;
-    margin-top: 9px;
   }
 
-  .transformation-stages__subtitle-wrap {
+  .stages__subtitle-wrap {
     flex-direction: column;
     align-items: flex-start;
   }
@@ -203,7 +204,7 @@ ul.transformation-stages__list {
     font-weight: bold;
     color: #333;
   }
-  .transformation-stages__item::before {
+  .stages__item::before {
     width: 24px;
     height: 24px;
     font-size: 16px;
