@@ -1,6 +1,6 @@
 .footer {
   background: #e9ded4;
-  height: 150px;
+  max-height: 150px;
 }
 
 .footer__inner {
@@ -9,15 +9,15 @@
 .footer__inner p {
   color: #313131;
   font-family: "Golos Text";
+  font-weight: 400;
   font-size: 16px;
   line-height: 120%;
   opacity: 0.6;
-  letter-spacing: 1;
 }
 
 @media (max-width: 375px) {
     .footer {
-        height: 252px;
+        min-height: 252px;
       }
       .footer__inner {
         padding: 40px 20px 60px 20px;

@@ -1,5 +1,7 @@
 .stages__inner {
   margin-top: 166px;
+  margin-left: 72px;
+  margin-right: 72px;
 }
 
 .stages__name,
@@ -28,7 +30,12 @@
   display: flex;
   align-items: center;
 }
-.stages__list {
+
+.carousel {
+  padding-top: 54px;
+  position: relative;
+}
+.stages__list_desctop {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
@@ -36,20 +43,15 @@
   margin: auto;
   list-style: none;
   padding: 0;
-  margin-top: 54px;
 }
 
-.carousel {
-  position: relative;
-}
-
-.stages-img {
+.stages__airplane-desctop {
   position: absolute;
-  right: -41px;
-  bottom: 26px;
+  right: -42px;
+  bottom: 23px;
 }
 
-.stages__list li {
+.stages__list_desctop li {
   color: #313131;
   font-family: "Golos Text";
   font-size: 20px;
@@ -57,10 +59,11 @@
   line-height: 120%;
 }
 .stages__item {
-  background-color: #f0f0f0;
-  padding: 18px 20px 5px 70px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  background-image: url("../../public/images/background-slide.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 18px 20px 20px 70px;
   position: relative;
 }
 
@@ -81,10 +84,6 @@
   color: #333;
 }
 
-ul.stages__list {
-  margin-top: 147px;
-}
-
 .stages__item--span-rows {
   grid-row: span 2;
 }
@@ -99,8 +98,38 @@ ul.stages__list {
   display: inline;
 }
 
+.stages__airplane-mobile {
+  display: none;
+  position: absolute;
+  right: 0px;
+  bottom: 87px;
+}
+
+.stages__list_mobile {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .stages__airplane-desctop {
+    display: none;
+  }
+}
 @media (max-width: 375px) {
- 
+  .stages__airplane-mobile {
+    display: block;
+  }
+  .stages__list_desctop {
+    display: none;
+  }
+
+  .stages__list_mobile {
+    display: grid;
+  }
+
+  .stages__airplane-mobile {
+    display: block;
+    right: 12px;
+    top: 15px;
+  }
   .carousel__controls {
     display: block;
   }
@@ -114,7 +143,8 @@ ul.stages__list {
   }
 
   .carousel {
-    position: relative;
+    /* position: relative; */
+    padding-top: 144px;
     width: 340px;
     overflow: hidden;
     display: flex;
@@ -134,18 +164,16 @@ ul.stages__list {
   }
   .prev-button,
   .next-button {
-    width: 36px; 
-     height: 36px;
+    width: 36px;
+    height: 36px;
     border: none;
     background-color: transparent;
   }
-
 
   .slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
   }
-
 
   .carousel__indicators {
     display: flex;
@@ -153,9 +181,8 @@ ul.stages__list {
     align-items: center;
     margin-left: 15px;
     margin-right: 15px;
-    
   }
-  
+
   .carousel__indicator {
     width: 10px;
     height: 10px;
@@ -163,22 +190,31 @@ ul.stages__list {
     border-radius: 50%;
     transition: background-color 0.3s;
   }
-  
+
   .carousel__indicator.active {
     background-color: #313131;
   }
 
   .stages__inner {
     padding-left: 21px;
-        padding-right: 16px;
-        margin-top: 112px;
+    padding-right: 16px;
+    margin-top: 114px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 
   .stages__name,
   .stages__title {
     font-size: 36px;
   }
-  
+
+  .stages__name {
+    margin-top: -3px;
+  }
+  .stages__subtitle {
+    margin-top: 9px;
+  }
+
   .stages__subtitle {
     margin-left: 0;
   }
@@ -209,5 +245,4 @@ ul.stages__list {
     height: 24px;
     font-size: 16px;
   }
-
 }

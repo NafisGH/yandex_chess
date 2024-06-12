@@ -100,19 +100,18 @@ td * {
   display: flex;
   width: 100%;
   flex-wrap: wrap;
-  /* justify-content: space-around; */
 }
 
 .lecture__event-image-wrapper {
   max-width: 528px;
   flex: 1;
-  min-width: 300px;
+  /* min-width: 300px; */
   margin-top: 44px;
   margin-left: -27px;
 }
 .lecture__event-details {
   flex: 1;
-  min-width: 300px;
+  /* min-width: 300px; */
   padding-left: 18px;
 }
 .lecture__event-image {
@@ -122,7 +121,6 @@ td * {
 
 .lecture__event-title {
   padding-top: 91px;
-  /* padding-left: 18px; */
   font-size: 36px;
   line-height: 135%;
   text-transform: uppercase;
@@ -140,16 +138,104 @@ td * {
   max-width: 704px;
 }
 
+
+
 .lecture__event-note {
   margin-top: 30px;
   color: #3057a2;
   font-family: "Golos Text";
   font-weight: 400;
   font-size: 20px;
-  /* line-height: 120%; */
 }
 
+@media (max-width: 1024px) {
+  .lecture__event {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+  }
+
+  .lecture__event-details {
+    flex: 1;
+    max-width: 700px;
+    padding-left: 18px;
+  }
+}
 @media (max-width: 375px) {
+
+  table {
+    display: flex;
+    flex-direction: column;
+    margin-top: 33px;
+        padding-left: 5px;
+  }
+  tr {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  td {
+    flex-basis: 100%;
+    padding: 10px;
+  }
+
+  tr:not(:last-child) td {
+    border-bottom: none;
+  }
+  td:not(:last-child) {
+    border-right: none;
+  }
+  tr:not(:last-child) {
+    border-bottom: 2px solid #D0D0D0;
+  }
+
+  tr:nth-child(1) td:nth-child(1) {
+    /* стили для первого элемента <td> в 1 ряде */
+    padding: 2px 0px 8px 15px;
+  }
+  
+  tr:nth-child(1) td:nth-child(2) {
+    /* стили для второго элемента <td> в 1 ряде */
+    padding: 4px 0px 15px 15px;
+  }
+
+  tr:nth-child(2) td:nth-child(1) {
+    /* стили для первого элемента <td> в 2 ряде */
+    padding: 14px 0px 8px 15px;
+  }
+  tr:nth-child(2) td:nth-child(2) {
+    /* стили для второго элемента <td> в 2 ряде */
+    padding: 4px 0px 15px 15px;
+  }
+  tr:nth-child(3) td:nth-child(1) {
+    /* стили для первого элемента <td> в 3 ряде */
+    padding: 14px 0px 8px 15px;
+  }
+  tr:nth-child(3) td:nth-child(2) {
+    /* стили для второго элемента <td> в 3 ряде */
+    padding: 4px 0px 15px 15px;
+  }
+  tr:nth-child(4) {
+    flex-wrap: nowrap;
+  }
+  tr:nth-child(4) td:nth-child(1) {
+    /* стили для первого элемента <td> в 4 ряде */
+    padding: 16px 0px 0px 15px;
+  }
+  tr:nth-child(4) td:nth-child(2) {
+    /* стили для второго элемента <td> в 4 ряде */
+    padding: 16px 0px 15px 0px;
+  }
+  tr:nth-child(5) td:nth-child(1) {
+    /* стили для первого элемента <td> в 5 ряде */
+    padding: 14px 0px 8px 15px;
+  }
+  tr:nth-child(5) td:nth-child(2) {
+    /* стили для второго элемента <td> в 5 ряде */
+    padding: 5px 0px 15px 15px;
+  }
+
+
   .lecture__wrap {
     display: block;
     margin-left: 0px;
@@ -194,8 +280,9 @@ td * {
     padding-left: 2px;
   }
   .lecture__event {
-    flex-direction: column;
-    justify-content: space-between;
+    /* flex-direction: column; */
+    align-items:flex-start;
+    /* justify-content: space-between; */
     margin-top: 355px;
   }
 
@@ -203,10 +290,19 @@ td * {
     width: 370px;
     height: 407px;
     margin-left: 2px;
+    margin-top: 40px;
+  }
+
+  .lecture__event-details {
+    padding-left: 0px;
+  }
+  .lecture__event-br {
+    display: none;
   }
 
   .lecture__event-title {
-    width: 307px;
+    padding-top: 0px;
+    width: 315px;
     font-size: 28px;
     margin-right: 0px;
     padding-left: 20px;
@@ -225,7 +321,7 @@ td * {
   }
 
   .lecture__event-note {
-    margin-top: 37px;
+    margin-top: 25px;
     padding-left: 20px;
   }
 }

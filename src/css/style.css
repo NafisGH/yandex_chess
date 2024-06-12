@@ -12,33 +12,21 @@ body {
   overflow-x: hidden;
 }
 
-
-
-/* .wrapper {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-} */
-
 .container {
   max-width: 1366px;
   margin: 0 auto;
-  /* padding: 0 20px; */
 }
-
 
 .stop-scroll {
   overflow: hidden;
 }
 
 .header__inner {
-   width: 100%;
-  /* height: 700px; */
-  padding-left: 72px; 
+  width: 100%;
+  padding-left: 72px;
   position: relative;
   padding-top: 26px;
   height: 100%;
-  padding-left: 72px;
   padding-bottom: 128px;
 }
 .header__background {
@@ -135,10 +123,20 @@ body {
 .header__background_mobile {
   display: none;
 }
+
+@media (max-width: 1024px) {
+  .header__pawn {
+    display: none;
+  }
+}
 @media (max-width: 375px) {
   .header {
     height: 810px;
     position: relative;
+  }
+  .header__inner {
+    padding-left: 20px;
+    position: static;
   }
 
   .main {
@@ -167,7 +165,8 @@ body {
     z-index: -1;
   }
   .header__wrapper {
-    padding-top: 30px;
+    /* padding-top: 30px; */
+    margin-top: 65px;
   }
   .header__background {
     display: none;
@@ -177,8 +176,23 @@ body {
   }
   .header__title {
     font-size: 36px;
+    line-height: 110%;
+    /* display: flex; */
+    /* justify-content: center; */
+  }
+  .header__title .title__span1 {
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header__title .title__span2 {
+    display: inline-block;
+    text-align: right;
   }
 
+  .header__text {
+    text-align: start;
+  }
   .header__box {
     display: flex;
     flex-direction: column;
@@ -195,51 +209,9 @@ body {
     padding: 12px 18px;
   }
 
-  /* .hero__logo {
-    left: 20px;
-    top: 19px;
-    width: 211px;
-    height: auto;
-  }
-
-  .hero__content {
-    padding-top: 91px;
-    max-width: 335px;
-  }
-  .hero__headline {
-    width: 335px;
-  }
-  .hero__headline p {
-    font-size: 36px;
-    letter-spacing: 0.2px;
-  }
-
-  .hero__text {
-    width: 335px;
-    font-size: 18px;
-    margin-top: 25px;
-    text-align: start;
-  }
-
-  .hero__buttons {
-    margin-top: 30px;
-    width: 335px;
-  }
-
-  .hero__button {
-    font-size: 14px;
-    width: 100%;
-    padding: 13px;
-    letter-spacing: 2px;
-  }
-
-  .header__button {
-    margin-right: 0;
-    margin-bottom: 16px;
-    width: 100%;
-  }
-
   .header__button_color {
-    width: 100%;
-  } */
+    opacity: 0.9;
+    background: #fff;
+    border: none;
+  }
 }
