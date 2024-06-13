@@ -14,8 +14,13 @@
     <div class="container">
       <div class="wrapper">
         <div class="header__inner">
-          <img class="header__background" src="./public/images/header.png" alt="Шахматная доска">
-          <img class="header__background_mobile" src="./public/images/header-mobile.png" alt="Шахматная доска">
+          <picture>
+            <img class="header__background" srcset="./public/images/header.png" media="min-width: 375px"
+              alt="Шахматная доска">
+            <img class="header__background_mobile" srcset="./public/images/header-mobile.png" media="max-width: 375px"
+              alt="Шахматная доска">
+          </picture>
+
           <img class="header__logo" src="./public/images/logo.svg" alt="Логотип Клуб Четырех коней">
           <img class="header__pawn" src="./public/images/pawn.png" alt="Пешка">
           <div class="header__wrapper">
@@ -112,7 +117,8 @@
             <div class="lecture__event-details">
               <h2 class="lecture__event-title">
                 <span class="lecture__event-title--highlight">И сеанс </span>
-                <span class="lecture__event-title--default">одновременной игры <br class="lecture__event-br">в шахматы на 160 досках</span>
+                <span class="lecture__event-title--default">одновременной игры <br class="lecture__event-br">в шахматы
+                  на 160 досках</span>
                 <span class="lecture__event-title--highlight">гроссмейстера О. Бендера</span>
               </h2>
               <table>
@@ -184,17 +190,13 @@
                 «Большие Васюки»<br>с регулярным отправлением
                 почтовых<br>самолётов и дирижаблей во все концы<br>света, включая Лос-Анджелес и Мельбурн</li>
 
-              <div class="stages__airplane-desctop">
-                <img src="./public/images/airplane-desctop.png" alt="">
+              <div class="stages__airplane">
+                <img src="./public/images/airplane.png" alt="">
               </div>
-              <div class="stages__airplane-mobile">
-                <img src="./public/images/airplane-mobile.png" alt="">
-              </div>
-
             </ul>
 
 
-             <!-- <ul class="stages__list_mobile slider">
+            <!-- <ul class="stages__list_mobile slider">
               <li class="stages__item">
                 <span class="stage-number">1</span>
                 Строительство железнодорожной

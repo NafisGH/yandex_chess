@@ -8,13 +8,13 @@ table {
   border-collapse: collapse;
   width: 100%;
   margin-top: 45px;
-  table-layout: auto; /* Используем автоматическое распределение ширины */
+  table-layout: auto; 
   padding-top: 5px;
 }
 
 td {
-  padding: 0; /* Убираем padding по умолчанию */
-  border: none; /* Убираем границы по умолчанию */
+  padding: 0; 
+  border: none; 
   box-sizing: border-box;
 }
 
@@ -34,8 +34,8 @@ td:nth-child(1) {
   padding-top: 2px;
   padding-bottom: 8px;
   padding-right: 20px;
-  white-space: nowrap; /* Запрещаем перенос строк */
-  width: auto; /* Устанавливаем ширину по содержимому */
+  white-space: nowrap; 
+  width: auto; 
 }
 
 td:nth-child(2) {
@@ -161,7 +161,13 @@ td * {
     padding-left: 18px;
   }
 }
-@media (max-width: 375px) {
+
+@media (max-width: 768px) {
+  .lecture__event {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 425px) {
 
   table {
     display: flex;

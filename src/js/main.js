@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let autoSlideInterval = setInterval(moveNext, 4000);
 
   const handleResize = () => {
-    if (window.innerWidth <= 375) {
+    if (window.innerWidth <= 425) {
       visibleItems = 1;
     } else {
       visibleItems = 3;
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.addEventListener("resize", function () {
-    if (window.innerWidth <= 375) {
+    if (window.innerWidth <= 425) {
       lectureWrap.innerHTML = getMobileTemplate();
       tableWrapperContent.innerHTML = getMobileTable();
     } else {
@@ -285,9 +285,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Инициализация слайдера
-  if (window.innerWidth <= 375) {
+  if (window.innerWidth <= 425 || window.innerWidth <= 768) {
     updateSlider();
   }
+
+ 
 
   window.addEventListener("resize", () => {
     console.log(window.innerWidth);

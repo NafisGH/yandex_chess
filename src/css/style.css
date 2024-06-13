@@ -11,28 +11,22 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
-
 .container {
   max-width: 1366px;
   margin: 0 auto;
 }
 
-.stop-scroll {
-  overflow: hidden;
-}
-
-.header__inner {
-  width: 100%;
-  padding-left: 72px;
+.header {
   position: relative;
   padding-top: 26px;
-  height: 100%;
-  padding-bottom: 128px;
+  height: 700px;
 }
+
 .header__background {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   object-fit: cover;
   object-position: bottom;
   height: 100%;
@@ -41,9 +35,20 @@ body {
 }
 
 .header__logo {
-  position: absolute;
-  top: 25px;
-  left: 73px;
+  object-fit: cover;
+  width: 245px;
+  height: 36px;
+  margin-left: 72px;
+}
+
+.header__wrapper {
+  margin-top: 62px;
+  margin-left: 72px;
+  max-width: 542px;
+}
+
+.stop-scroll {
+  overflow: hidden;
 }
 
 .header__pawn {
@@ -51,10 +56,7 @@ body {
   right: 45px;
   bottom: 20px;
 }
-.header__wrapper {
-  margin-top: 98px;
-  max-width: 542px;
-}
+
 .header__title {
   font-family: "Merriweather";
   font-size: 60px;
@@ -129,15 +131,22 @@ body {
     display: none;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .header {
     height: 810px;
     position: relative;
   }
-  .header__inner {
+
+  .header__logo {
+    width: 245px;
+    height: 36px;
+    margin-left: 19px;
+    margin-top: -11px;
+  }
+  /* .header__inner {
     padding-left: 20px;
     position: static;
-  }
+  } */
 
   .main {
     position: relative;
@@ -148,7 +157,7 @@ body {
     position: absolute;
     top: -84px;
     left: 0;
-    max-width: 375px;
+    max-width: 425px;
     z-index: 2;
   }
 
@@ -165,8 +174,8 @@ body {
     z-index: -1;
   }
   .header__wrapper {
-    /* padding-top: 30px; */
-    margin-top: 65px;
+    margin-top: 40px;
+        margin-left: 23px;
   }
   .header__background {
     display: none;
@@ -177,17 +186,15 @@ body {
   .header__title {
     font-size: 36px;
     line-height: 110%;
-    /* display: flex; */
-    /* justify-content: center; */
+    justify-content: space-between;
   }
   .header__title .title__span1 {
     display: inline-block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 60px;
   }
   .header__title .title__span2 {
     display: inline-block;
-    text-align: right;
+    margin-right: 64px;
   }
 
   .header__text {
@@ -203,6 +210,9 @@ body {
   }
   .header__box {
     margin-top: 29px;
+    width: 400px;
+    margin-left: -35px;
+
   }
   .header__button {
     max-width: 335px;

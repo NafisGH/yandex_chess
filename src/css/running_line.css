@@ -65,7 +65,7 @@
   }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .running-line__wrapper {
     padding: 10px 12px;
   }

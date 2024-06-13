@@ -126,12 +126,12 @@
 
 @media (max-width: 1024px) {
   .participants__item {
-    flex: 0 0 calc(33.333% - 28px); /* Убедимся, что ширина корректно рассчитывается */
+    flex: 0 0 calc(33.333% - 28px); 
     text-align: center;
-    margin: 0 14px; /* Убедимся, что отступы сбалансированы */
+    margin: 0 14px; 
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 425px) {
   .tournament-participants__inner {
     margin-top: 101px;
     padding-left: 18px;

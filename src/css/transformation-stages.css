@@ -45,7 +45,24 @@
   padding: 0;
 }
 
-.stages__airplane-desctop {
+.stages__item {
+  background-image: url("../../public/images/background-slide.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 18px 20px 20px 70px;
+  position: relative;
+}
+
+.stages__item--span-rows {
+  grid-row: span 2;
+}
+
+.stages__item--span-cols {
+  grid-column: span 2;
+}
+
+.stages__airplane {
   position: absolute;
   right: -42px;
   bottom: 23px;
@@ -58,14 +75,7 @@
   font-weight: 500;
   line-height: 120%;
 }
-.stages__item {
-  background-image: url("../../public/images/background-slide.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 18px 20px 20px 70px;
-  position: relative;
-}
+
 
 .stage-number {
   position: absolute;
@@ -84,13 +94,7 @@
   color: #333;
 }
 
-.stages__item--span-rows {
-  grid-row: span 2;
-}
 
-.stages__item--span-cols {
-  grid-column: span 2;
-}
 .carousel__controls {
   display: none;
 }
@@ -105,27 +109,74 @@
   bottom: 87px;
 }
 
-.stages__list_mobile {
-  display: none;
-}
+
 @media (max-width: 1024px) {
   .stages__airplane-desctop {
     display: none;
   }
 }
-@media (max-width: 375px) {
-  .stages__airplane-mobile {
-    display: block;
+
+@media (max-width: 768px) {
+
+  .stages__inner {
+    margin-left: 35px;
   }
-  .stages__list_desctop {
-    display: none;
+  .carousel {
+    padding-top: 200px;
+    width: 700px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .carousel__controls {
+    display: flex;
+    margin-top: 10px;
+  }
+  .carousel__indicators {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .carousel__indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+  }
+
+  .carousel__indicator.active {
+    background-color: #313131;
+  }
+
+  .prev-button,
+  .next-button {
+    width: 36px;
+    height: 36px;
+    border: none;
+    background-color: transparent;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+  } 
+  .stages__airplane {
+    right: -50px;
+    bottom: 120px;
+}
+}
+@media (max-width: 425px) {
+  
 
   .stages__list_mobile {
     display: grid;
   }
 
-  .stages__airplane-mobile {
+  .stages__airplane {
     display: block;
     right: 12px;
     top: 15px;
@@ -143,7 +194,6 @@
   }
 
   .carousel {
-    /* position: relative; */
     padding-top: 144px;
     width: 340px;
     overflow: hidden;
@@ -170,10 +220,10 @@
     background-color: transparent;
   }
 
-  .slider {
+   .slider {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
+    transition: transform 0.8s ease-in-out;
+  } 
 
   .carousel__indicators {
     display: flex;
